@@ -1,5 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Dimensions } from 'react-native';
+import { moderateScale } from '../../helpers/scale';
 
 
 const { height } = Dimensions.get('window');
@@ -11,13 +12,16 @@ export default EStyleSheet.create({
     justifyContent: 'center',
   },
   AppLoadingLoaderText: {
-    fontSize: 16,
-    paddingVertical: 10,
-    opacity: 0.45,
+    fontSize: moderateScale(18),
+    fontWeight: 'bold',
+    paddingVertical: moderateScale(10),
+    textAlign: 'center',
+    color: '$activeColor',
+    height: moderateScale(50),
   },
   AppLoadingLoader: {
-    marginTop: 15,
-    marginLeft: -10,
+    marginTop: moderateScale(25),
+    marginLeft: moderateScale(-10),
     marginBottom: 0,
     opacity: 0.5,
   },

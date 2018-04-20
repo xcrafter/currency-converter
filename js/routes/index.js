@@ -1,11 +1,13 @@
 import { TabNavigator, TabBarBottom, StackNavigator } from 'react-navigation';
 import Home from './../views/home';
 import Histories from './../views/history';
+import Entries from './../views/entries';
+import { AppColorTheme } from '../config/constants';
 
 
 const homeRouter = StackNavigator({
   home: Home,
-  history: Histories,
+  entries: Entries,
 }, {
   initialRouteName: 'home',
 });
@@ -20,12 +22,17 @@ const MainTabRouter = TabNavigator({
   history: historyRouter,
 }, {
   initialRouteName: 'home',
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: AppColorTheme.color_primay,
+    },
+  },
   tabBarComponent: TabBarBottom,
   tabBarPosition: 'bottom',
   lazy: true,
   animationEnabled: true,
   tabBarOptions: {
-    activeTintColor: '#d16907',
+    activeTintColor: AppColorTheme.color_primay,
     style: {
       backgroundColor: '#fff',
     },

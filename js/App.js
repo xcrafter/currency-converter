@@ -22,7 +22,7 @@ export default class App extends Component {
     const self = this;
     AppState.addEventListener('change', self.handleAppStateChange.bind(this));
     const store = configureStore(() => {
-      this.setState({ isLoading: false });
+      setTimeout(() => this.setState({ isLoading: false }), 1000);
     });
     this.setState({ store });
   }
@@ -38,7 +38,7 @@ export default class App extends Component {
   }
   render() {
     const self = this;
-    if (self.state.isLoading) return (<AppLoading appText="Test App" />);
+    if (self.state.isLoading) return (<AppLoading appText="Currency Converter" />);
 
     return (
       <Provider store={self.state.store}>
