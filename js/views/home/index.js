@@ -45,12 +45,12 @@ class Home extends Component {
   }
 
   static navigationOptions = ({ navigation, screenProps }) => ({
-    title:  'Home',
+    title:  'Converter',
     headerStyle:{
         backgroundColor:AppColorTheme.color_primay,
     },
     headerTintColor:'#000',
-    headerTitleStyle:{color:AppColorTheme.light_text, fontSize: moderateScale(14) },
+    headerTitleStyle:{color:AppColorTheme.light_text, fontSize: moderateScale(17) },
     tabBarLabel: 'Convert', 
       // Note: By default the icon is only shown on iOS. Search the showIcon option below.
     tabBarIcon: ({ tintColor }) => (
