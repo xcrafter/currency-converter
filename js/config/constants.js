@@ -8,6 +8,6 @@ export const AppColorTheme = {
   light_text: '#fff',
 };
 export default {
-  base_url: 'https://txf-ecb.glitch.me/rates',
+  base_url: 'https://txf-ecb.glitch.me',
 };
 
