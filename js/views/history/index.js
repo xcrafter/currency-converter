@@ -22,8 +22,8 @@ class Home extends Component {
   });
   render() {
     return (
-      <View>
-        <Text>History Page</Text>
+      <View style={{flex:1,backgroundColor:'#fff'}}>
+   
       </View>
     );
   }

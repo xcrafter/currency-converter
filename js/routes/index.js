@@ -10,6 +10,22 @@ const homeRouter = StackNavigator({
   entries: Entries,
 }, {
   initialRouteName: 'home',
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: AppColorTheme.color_primay,
+    },
+  },
+  tabBarComponent: TabBarBottom,
+  tabBarPosition: 'bottom',
+  lazy: true,
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: AppColorTheme.color_primay,
+    style: {
+      backgroundColor: '#fff',
+    },
+  },
+
 });
 const historyRouter = StackNavigator({
   history: Histories,
@@ -40,5 +56,5 @@ const MainTabRouter = TabNavigator({
 
 });
 
-export default MainTabRouter;
+export default homeRouter;
 
